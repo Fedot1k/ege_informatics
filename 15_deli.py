@@ -1,10 +1,14 @@
-def deli(n, m):
+def deli(n, m): # функция делимости
     return n % m == 0
+
+
+# решение задачи ↓↓↓
+
 
 for A in range(1, 10000):
     flag = True
     for x in range(1, 3000):
-        if ((deli(A, 40)) and (deli(780, x)) <= ((not deli(A, x)) <= (not deli(180, x)))) == False:
+        if (((deli(x, 45)) and (not deli(x, 15))) <= (not deli(x, A))) == False: # условие из задачи (просто переписать)
             flag = False
             break
     if flag:
