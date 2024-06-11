@@ -1,18 +1,32 @@
-file = open('G:/fedot/5.txt') #создание файла
+file = open('G:/fedot/2.txt') #создание файла
 s = [int(x) for x in file]
 
-c = 0
-res = []
 
-for i in range(len(s) - 1):
+# решение задачи ↓↓↓
+
+
+m = sorted(s)[-3]
+
+
+res = []
+count = 0
+for i in range(len(s) - 2):
     n1 = s[i]
     n2 = s[i+1]
-    l1 = n1 % 10
-    l2 = n2 % 10
-    pro = abs(n1) * abs(n2)
-    
-    if (l1 % 2 != 0) and (l2 % 2 != 0) and (l1 != l2):
-        c += 1
-        res.append(pro)
+    n3 = s[i+2]
+    count = 0
 
-print(c, min(res))
+    if n1%2==0:
+        count += 1
+    if n2%2==0:
+        count += 1
+    if n3%2==0:
+        count += 1
+
+    if count <= 2:
+        to = n1 + n2 + n3
+        if to <= m:
+            res.append(to)
+
+
+print(len(res), max(res))

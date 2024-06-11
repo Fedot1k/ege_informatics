@@ -1,4 +1,4 @@
-def conv(n, base):
+def conv(n, base): # функция перевода в системы счисления (base < 10)
     res = ''
     while n != 0:
         res += str(n % base)
@@ -6,22 +6,18 @@ def conv(n, base):
     return res[::-1]
 
 
+# решение задачи ↓↓↓
 
-d = [7, 13, 17, 19]
 
 c = 0
-m = -1
+m = []
 
-for i in range(1111, 10000):
-    pro = 1
+for i in range(138, 603885):
     s = [int(x) for x in str(i)]
 
-    for j in s:
-        pro = pro * j
-
-    if (i%(sum(s))==0) and (pro != 0) and (i%pro==0):
+    if check(i) and p_of_three(i):
         c += 1
-        m = max(m, i)
+        m.append(i)
 
 
 print(c, m)

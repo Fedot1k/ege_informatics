@@ -1,9 +1,8 @@
 from functools import lru_cache
 
-
 def moves(s):
     a, b = s
-    return (a+2, b), (a*2, b), (a, b+2), (a, b*2) #возможные действия
+    return (a+2, b), (a*2, b), (a, b+2), (a, b*2) # возможные действия
 
 
 @lru_cache(maxsize=100000) # ограничение рекурсии

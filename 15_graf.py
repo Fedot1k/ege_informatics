@@ -1,5 +1,9 @@
-def deli(n, m):
+def deli(n, m): # функция делимости
     return n % m == 0
+
+
+# решение задачи ↓↓↓
+
 
 for A in range(1, 10000):
     flag = True
