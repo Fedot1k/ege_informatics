@@ -1,4 +1,4 @@
-# Computer Science EGE 2025 | About
+# Informatics EGE 2025 | About
 
 **Programs** To Get **100**.
 
